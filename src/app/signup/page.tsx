@@ -8,6 +8,39 @@ export default function SignUp() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [errors, setErrors] = useState<{ email?: string; password?: string; confirmPassword?: string }>({});
+
+  const validateForm = () => {
+    const newErrors: typeof errors = {};
+
+    if (!email) {
+      newErrors.email = "Email is required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      newErrors.email = "Invalid email format";
+    }
+
+    if (!password) {
+      newErrors.password = "Password is required";
+    } else if (password.length < 8) {
+      newErrors.password = "Password must be at least 8 characters long";
+    }
+
+    if (!confirmPassword) {
+      newErrors.confirmPassword = "Please confirm your password";
+    } else if (password !== confirmPassword) {
+      newErrors.confirmPassword = "Passwords do not match";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (validateForm()) {
+      console.log("Form submitted successfully!");
+    }
+  };
 
   return (
     <div className="flex min-h-screen items-center justify-center px-4 sm:px-6 lg:px-8 bg-[#0F172A]">
@@ -17,11 +50,9 @@ export default function SignUp() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="bg-[#1E293B] p-6 sm:p-8 rounded-2xl shadow-xl w-full max-w-sm sm:max-w-md lg:max-w-lg text-[#CBD5E1]"
       >
-        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6">
-          Sign Up
-        </h2>
+        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6">Sign Up</h2>
 
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label className="block text-sm font-semibold mb-1">Email</label>
             <input
@@ -31,6 +62,7 @@ export default function SignUp() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
+            {errors.email && <p className="text-red-400 text-xs mt-1">{errors.email}</p>}
           </div>
 
           <div className="mb-4">
@@ -42,12 +74,11 @@ export default function SignUp() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
+            {errors.password && <p className="text-red-400 text-xs mt-1">{errors.password}</p>}
           </div>
 
           <div className="mb-6">
-            <label className="block text-sm font-semibold mb-1">
-              Confirm Password
-            </label>
+            <label className="block text-sm font-semibold mb-1">Confirm Password</label>
             <input
               type="password"
               className="w-full px-4 py-2 bg-[#0F172A] border border-[#CBD5E1] rounded-lg focus:ring-2 focus:ring-[#CBD5E1] outline-none text-sm sm:text-base"
@@ -55,6 +86,7 @@ export default function SignUp() {
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
             />
+            {errors.confirmPassword && <p className="text-red-400 text-xs mt-1">{errors.confirmPassword}</p>}
           </div>
 
           <motion.button
