@@ -1,41 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TekHud: Your Local Electronics Finder
 
-## Getting Started
+Welcome to TekHud! This app is your one-stop solution for finding the best deals on smart devices and electronics at local shops—all without stepping out of your home. Compare, select, and order with ease!
 
-First, run the development server:
+# 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Discover Local Electronics**: Explore a wide range of smart devices and electronics available at nearby shops.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Best Deals at Your Fingertips**: Compare prices and find the best deals across multiple stores in your area.
 
-Production [https://tekhud-frontend.vercel.app/]
+- **Convenient Home Shopping**: Stay cozy and shop from the comfort of your home.
 
-sandbox - [https://tekhud-frontend-c4hy.vercel.app/]
+- **One-Click Ordering**: Easily order your selected items for home delivery or store pickup.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Updated Inventory**: Real-time availability ensures you’re always seeing the latest stock.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# 🎯 Why Choose TekHud?
 
-## Learn More
+- **Saves Time & Effort**: No more visiting multiple shops to compare prices or check availability.
 
-To learn more about Next.js, take a look at the following resources:
+- **Budget-Friendly**: Get the best deals without compromising on quality.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Local Support**: Support your local businesses while enjoying the convenience of online shopping.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# 🛠 How to Use
 
-## Deploy on Vercel
+- **Sign Up / Log In**: Create an account or sign in.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Search**: Enter the product name or browse categories.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# tekhud-frontend
+- **Compare**: View pricing and availability from multiple local shops.
+
+- **Select & Order**: Choose your preferred item and place your order with one click.
+
+# 🔒 Privacy & Security
+
+We prioritize your privacy and ensure secure transactions with the latest encryption standards.
+
+# Staging: [https://tekhud-frontend.vercel.app/]
