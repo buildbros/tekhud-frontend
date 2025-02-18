@@ -4,7 +4,6 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  @apply bg-background text-foreground;
   background-color: #0F172A;
   color: #CBD5E1;
 }
@@ -65,8 +64,3 @@ body {
   }
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
- 
